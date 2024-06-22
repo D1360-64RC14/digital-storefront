@@ -9,6 +9,12 @@ namespace Domain.Ports.Driven.Persistence;
 
 public interface IProductPersistence
 {
-    List<Product> FetchAllProducts();
-    Product? FetchProductById(Guid id);
+    List<Product> FetchProducts();
+    List<Combination> FetchCombinationsFor(Product product);
+    Product? FetchProductBy(Guid id);
+
+    void Store(out Product product);
+    void Update(out Product product);
+    void Remove(Product product);
+    void Hide(Product product);
 }

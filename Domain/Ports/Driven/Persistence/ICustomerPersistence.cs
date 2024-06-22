@@ -9,6 +9,10 @@ namespace Domain.Ports.Driven.Persistence;
 
 public interface ICustomerPersistence
 {
-    Customer FindCustomer(Guid id);
+    Customer? FindCustomerBy(Guid id);
 
+    void Store(out Customer customer);
+    void Update(out Customer customer);
+    void Inactivate(out Customer customer);
+    void Block(out Customer customer);
 }

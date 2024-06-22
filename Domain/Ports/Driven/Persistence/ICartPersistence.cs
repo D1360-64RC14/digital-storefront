@@ -9,8 +9,10 @@ namespace Domain.Ports.Driven.Persistence;
 
 public interface ICartPersistence
 {
-    List<Product> FindCartFor(Customer customer);
-    void AddProductToCart(Product product, Customer customer);
-    void RemoveProductFromCart(Product product, Customer customer);
-    Guid StoreCart(Customer customer);
+    Cart FetchCartFor(Customer customer);
+    Cart StoreCartFrom(Customer customer);
+
+    void AddToCart(Product product, Customer customer);
+    void RemoveFromCart(Product product, Customer customer);
+    void ClearCartFrom(Customer customer);
 }

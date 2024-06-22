@@ -9,6 +9,10 @@ namespace Domain.Ports.Driven.Persistence;
 
 public interface ICategoryPersistence
 {
-    List<Category> FetchAllCategories();
-    Category? FetchCategoryById(Guid id);
+    List<Category> FetchCategories();
+    Category? FetchCategoryBy(Guid id);
+
+    void Store(out Category category);
+    void Update(out Category category);
+    void Remove(Category category);
 }
