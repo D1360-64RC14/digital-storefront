@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Ports.Driven;
+namespace Domain.Ports.Driven.Persistence;
 
 public interface ICustomerPersistence
 {
     Customer FindCustomer(Guid id);
-    
+
 }
